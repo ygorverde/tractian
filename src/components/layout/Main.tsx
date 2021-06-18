@@ -4,13 +4,11 @@ import { Layout, Avatar, Menu } from 'antd';
 
 import TreeSelect from '../TreeSelect/TreeSelect';
 
-// import TreeSelect2 from '../TreeSelect/TreeSelect2';
-
 import { UserOutlined, SettingFilled, EyeFilled } from '@ant-design/icons';
 
 import Title from 'antd/lib/typography/Title';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 type Props = {
   children: JSX.Element
@@ -23,7 +21,7 @@ function Main({ children }: Props) {
 
       <Header style={{ padding: 10 }}>
         <Avatar style={{ float: 'right' }} icon={<UserOutlined />} />
-        <Title style={{ color: 'white' }} level={3}>TRACTIAN SOFTWARE ENGENHARIA</Title>
+        <Title style={{ color: 'white' }} level={3}>TRACTIAN SOFTWARE ENGINEER</Title>
       </Header>
 
       <Layout>
@@ -44,12 +42,11 @@ function Main({ children }: Props) {
           </Menu>
         </Sider>
         <Layout>
-          <Content style={{ padding: '10px' }}>
-            <div style={{ background: '#fff', padding: 10, minHeight: 580 }}>
+          <Content style={{ padding: 10 }}>
+            <div style={{ background: '#ffffff', padding: 0, height: `100%` }}>
               {children}
             </div>
           </Content>
-          <Footer>Footer</Footer>
         </Layout>
       </Layout>
     </Layout>

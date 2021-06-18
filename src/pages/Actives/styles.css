@@ -1,0 +1,54 @@
+.mainactives {
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.85);
+    display: grid;
+    height: 100%;
+    margin: 0;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 
+        1fr 1fr 1fr 1fr
+    ;
+    grid-template-areas: 
+        "viewactive status"
+        "viewactive status"
+        "active healthscore"
+        "active timescollect"
+    ;
+}
+
+div.viewactive {
+    grid-area: viewactive;
+    margin: 10px;
+    background-color: darkkhaki;
+}
+
+div.active {
+    background-color: cadetblue;
+    margin: 10px;
+    grid-area: active;
+}
+
+div.status {
+    background-color: chocolate;
+    margin: 10px;
+    grid-area: status;
+}
+
+div.healthscore {
+    background-color: cornflowerblue;
+    margin: 10px;
+    grid-area: healthscore;
+}
+
+div.timescollect {
+    background-color: darkcyan;
+    margin: 10px;
+    grid-area: timescollect;
+}
+
+.ant-card-body {
+    padding: 10px;
+}
+
+.contentimage {
+    border-radius: 10px;
+}
