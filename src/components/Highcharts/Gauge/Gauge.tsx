@@ -15,8 +15,11 @@ function Gauge({ rotacao }: Props) {
             type: "solidgauge"
         },
         title: undefined,
+        credits: {
+            enabled: false
+        },
         pane: {
-            center: ['40%', '75%'],
+            center: ['50%', '80%'],
             size: '140%',
             startAngle: -90,
             endAngle: 90,

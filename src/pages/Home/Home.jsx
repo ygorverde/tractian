@@ -10,7 +10,7 @@ import api from '../../services/api';
 
 function Home() {
     const [actives, setActives] = useState([]);
-    const [percentages, setPercentages] = useState({total: 0});
+    const [percentages, setPercentages] = useState([]);
     const [activesStatus, setActivesStatus] = useState({});
 
     const cAndUnity = useSelector(
@@ -74,7 +74,9 @@ function Home() {
                 <Col span={10} className="teste" align="center">
                     <div className="actives">
                         <h2>{actives.length} Ativos</h2>
-                        <Progress type="circle" percent={percentages.total} width={180} strokeColor="#52c41a"/>
+                        <Progress type="circle" percent={percentages.total} width={180} 
+                        format={() => `${parseInt(percentages.total)}%`}
+                        strokeColor="#52c41a"/>
                     </div>
                 </Col>
                 <Col span={10}>

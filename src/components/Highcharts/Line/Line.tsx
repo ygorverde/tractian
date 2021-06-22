@@ -14,6 +14,9 @@ function Line({ healthscore, active}: Props) {
         chart: {
             type: 'column'
         },
+        credits: {
+            enabled: true
+        },
         title: {
           text: null
         },
