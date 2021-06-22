@@ -2,19 +2,20 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import './styles.css'
+import './styles.css';
 
 import { Row, Col, Progress, Card, Statistic } from 'antd';
 
-import api from '../../services/api'
+import api from '../../services/api';
 
 function Home() {
+    const [actives, setActives] = useState([]);
+    const [percentages, setPercentages] = useState([]);
+    const [activesStatus, setActivesStatus] = useState({});
+
     const cAndUnity = useSelector(
         state => state.data
     );
-    const [actives, setActives] = useState([]);
-    const [percentages, setPercentages] = useState([]);
-    const [activesStatus, setActivesStatus] = useState({})
 
     useEffect(() => {
         async function getActives() {
@@ -47,7 +48,7 @@ function Home() {
     }, [activesStatus])
 
     useEffect(() => {
-        let status = { inAlert: null, inOperation: null, inDowntime: 0, turnedoff: 1 }
+        let status = { inAlert: null, inOperation: null, inDowntime: 0, turnedoff: 0 }
         actives.map(active => {
             if (active.status === 'inAlert') {
                 status.inAlert++

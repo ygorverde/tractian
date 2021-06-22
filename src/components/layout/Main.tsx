@@ -27,11 +27,10 @@ function Main({ children }: Props) {
       <Layout>
         <Sider style={{ paddingTop: 0 }}>
           <Menu
-            defaultSelectedKeys={['Dashboard']}
+            // defaultSelectedKeys={['Dashboard']}
             mode="inline"
             theme="dark"
           >
-            {/* <TreeSelect /> */}
             <TreeSelect />
             <Menu.Item key="Dashboard" icon={<EyeFilled />}>
               <Link to="/">Visão Geral</Link>
@@ -43,7 +42,7 @@ function Main({ children }: Props) {
         </Sider>
         <Layout>
           <Content style={{ padding: 10 }}>
-            <div style={{ background: '#ffffff', padding: 0, height: `100%` }}>
+            <div style={{ background: '#ffffff', padding: 0, height: `100%`, maxWidth: `100%` }}>
               {children}
             </div>
           </Content>

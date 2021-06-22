@@ -8,7 +8,8 @@ function Routes() {
     return (
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/actives" component={Actives} />
+                <Route exact path="/actives" component={Actives} />
+                <Route exact path="/actives/:id" component={Home} />
                 <Redirect from='*' to="/" />
             </Switch>
     )

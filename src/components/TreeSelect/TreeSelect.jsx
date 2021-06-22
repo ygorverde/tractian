@@ -17,7 +17,6 @@ import { TreeSelect, Spin } from 'antd';
     })
 
     const onChange = (e) => {
-        console.log('ONCHANGE: ', e)
         setValue(value);
         dispatch({ type: 'SET_COMPANY', company: e })
     }
