@@ -143,7 +143,7 @@ function Actives() {
                                 <FontAwesomeIcon icon={faBolt} />
                             </div>
                             <h1>Consumo:</h1>
-                            <h2>{active.power === 0 || active.power === undefined ? `Não detecado` : `${active.power} kWh`}</h2>
+                            <h2>{active.power === 0 || active.power === undefined ? `Não detecado` : `${parseFloat(active.power).toFixed(3)} kWh`}</h2>
                         </li>
                     </Col>
                 </Row>
