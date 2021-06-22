@@ -10,7 +10,7 @@ import api from '../../services/api';
 
 function Home() {
     const [actives, setActives] = useState([]);
-    const [percentages, setPercentages] = useState([]);
+    const [percentages, setPercentages] = useState({total: 0});
     const [activesStatus, setActivesStatus] = useState({});
 
     const cAndUnity = useSelector(
@@ -98,8 +98,8 @@ function Home() {
                     </Card>
                 </Col>
                 <Col span={8} style={{ backgroundColor: '#afaf7833' }}>
-                    <Card title="Confiabilidade" bordered={false}>
-                        <Statistic title="Confiabilidade"/>
+                    <Card title="Indices" bordered={false}>
+                        <Statistic title="Indices"/>
                     </Card>
                     </Col>
             </Row>
